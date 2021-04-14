@@ -44,15 +44,3 @@ spec:
     targetPort: 9000
   selector:
     app: mlflow-minio
-
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: mlflow-pvc
-spec:
-  accessModes:
-    - ReadWriteMany
-  resources:
-    requests:
-      storage: 100Mi

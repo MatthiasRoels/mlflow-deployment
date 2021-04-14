@@ -41,11 +41,11 @@ spec:
             memory: "1Gi"
             cpu: "500m"
         volumeMounts:
-        - name: mlflow-pvc
+        - name: mlflow-postgres-pvc
           mountPath: /var/lib/postgresql/mlflow
   volumeClaimTemplates:
   - metadata:
-      name: mlflow-pvc
+      name: mlflow-postgres-pvc
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
