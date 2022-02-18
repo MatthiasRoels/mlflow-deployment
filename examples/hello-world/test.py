@@ -4,7 +4,7 @@ import mlflow
 
 
 # get port from running kubectl get services
-os.environ["MLFLOW_S3_ENDPOINT_URL"] = "http://localhost:30760/"
+os.environ["MLFLOW_S3_ENDPOINT_URL"] = "http://localhost:32365/"
 os.environ["AWS_ACCESS_KEY_ID"] = "minio"
 os.environ["AWS_SECRET_ACCESS_KEY"] = "minio123"
 
@@ -16,9 +16,9 @@ def main():
         f.write(features)
 
 
-    mlflow.set_tracking_uri("http://localhost:30496")
+    mlflow.set_tracking_uri("http://localhost:31517")
 
-    mlflow.set_experiment("mlflow-testing")
+    mlflow.set_experiment("test")
 
     with mlflow.start_run():
 
